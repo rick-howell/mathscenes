@@ -26,7 +26,7 @@ into). Each file prints its checks: the numbers behind what the video shows.
 | `sandpile.py` | The sandpile identity | Toppling sand on a grid; the identity element e = (6 − 6°)° of the sandpile group; the group's size as a determinant |
 | `aztec.py` | The Aztec diamond | Random domino tilings by domino shuffling, the count 2^(n(n+1)/2), and the frozen corners outside the arctic circle |
 | `newton.py` | Newton's method | The three basins of z³ = 1 under Newton's step, and how many steps each start takes |
-| `tonnetz.py` | The Tonnetz | Notes on a triangular lattice by φ(a, b) = 7a + 4b mod 12; its kernel Λ; chords as triangles; the P, L, R moves round the torus C/Λ |
+| `tonnetz.py` | The Tonnetz | Notes on a triangular lattice by φ(a, b) = 7a + 4b mod 12; its kernel Λ; chords as triangles; the P, L, R moves around the torus C/Λ |
 | `torus.py` | Two ways to build a torus | The square with glued edges, S¹ × S¹, the map between them, and the checks that it is a bijection |
 | `norms.py` | The parallelogram law (video coming) | p-norms and when ‖x + y‖² + ‖x − y‖² = 2‖x‖² + 2‖y‖² holds |
 | `svf.py` | The channel's banner | A state variable filter's transfer functions (low-, band-, high-pass, notch), their poles and zeros |
@@ -49,10 +49,10 @@ into). Each file prints its checks: the numbers behind what the video shows.
 ## How this was made
 
 The topics, the choice of what to show, the look and the final review are mine. The code
-was written with the help of an AI assistant (Claude), and the maths in each file is
+was written with the help of an AI assistant (Claude), and the math in each file is
 checked by the tests in its `__main__`. The videos are rendered by code, frame by frame,
 with synthesized music; no image, video or audio generators are used.
 
-## Licence
+## License
 
 MIT (see `LICENSE`): use, change and share the code freely, keeping the copyright notice.

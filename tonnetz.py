@@ -14,11 +14,11 @@
    three "neo-Riemannian" moves P, L, R.
 
 3. The kernel. φ is a homomorphism Z² -> Z/12Z onto all 12 notes, so its kernel
-   Λ = {(a, b) : 7a + 4b ≡ 0 mod 12} - every point labelled C - is a sublattice of index
+   Λ = {(a, b) : 7a + 4b ≡ 0 mod 12} - every point labeled C - is a sublattice of index
    12, spanned for example by (0, 3) (three major thirds = an octave) and (4, -1).
    Hence Z²/Λ ≅ Z/12Z: one tile of Λ holds each note exactly once.
 
-4. The torus. The labelling repeats along Λ, so the Tonnetz is really the plane with
+4. The torus. The labeling repeats along Λ, so the Tonnetz is really the plane with
    points identified when they differ by Λ: C/Λ, a torus. Walking P, L, P, L, ... goes
    once around it and comes back to the starting chord after six steps.
 
@@ -102,7 +102,7 @@ if __name__ == "__main__":
           note(1, 0), note(0, 1), " third edge (down-right) = +3 (minor third):", (note(1, 0) - note(0, 1)) % 12)
     det = V1[0] * V2[1] - V1[1] * V2[0]
     print("kernel basis", V1, V2, "in kernel:", in_kernel(*V1), in_kernel(*V2), " index |det| =", abs(det))
-    # every point labelled C is an integer combination of V1, V2
+    # every point labeled C is an integer combination of V1, V2
     ker = [(x, y) for x, y in zip(a.ravel(), b.ravel()) if in_kernel(x, y)]
     M = np.array([V1, V2]).T
     ok = all(np.allclose(np.round(np.linalg.solve(M, k)), np.linalg.solve(M, k)) for k in ker)

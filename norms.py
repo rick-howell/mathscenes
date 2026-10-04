@@ -7,7 +7,7 @@ lengths, the squares of the two diagonals add up to the squares of all four side
 
 A remarkable fact (Jordan and von Neumann, 1935): if a norm satisfies this law for all
 x and y, then it comes in the usual way from an inner product, ‖x‖ = √⟨x, x⟩, and the
-inner product can be read off from lengths alone (polarisation):
+inner product can be read off from lengths alone (polarization):
 
     ⟨x, y⟩ = (‖x + y‖² − ‖x − y‖²) / 4
 
@@ -83,4 +83,4 @@ if __name__ == "__main__":
     rng = np.random.default_rng(1)
     X, Y = rng.normal(size=(1000, 2)), rng.normal(size=(1000, 2))
     err = max(abs(polarisation(a, b, 2) - a @ b) for a, b in zip(X, Y))
-    print(f"p = 2: polarisation gives back the dot product (largest error {err:.1e})")
+    print(f"p = 2: polarization gives back the dot product (largest error {err:.1e})")

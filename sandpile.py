@@ -1,13 +1,13 @@
 """Episode - the identity element of the sandpile group.
 
 Put grains of sand on the cells of a region of the square grid. A cell holding 4 or
-more grains is unstable: it *topples*, sending one grain to each of its 4 neighbours
+more grains is unstable: it *topples*, sending one grain to each of its 4 neighbors
 (grains pushed outside the region fall off the edge for good). Keep toppling until
 nothing is unstable; the result does not depend on the order (that's the "abelian"
 in abelian sandpile).
 
 Stable configurations that can be reached from *every* configuration by adding sand
-are called recurrent. With "add pointwise, then stabilise" (written a ⊕ b) they form
+are called recurrent. With "add pointwise, then stabilize" (written a ⊕ b) they form
 a finite abelian group, the sandpile group. Its size equals the number of spanning
 trees of the grid with all outside cells merged into one sink vertex, which is
 det Δ for the reduced graph Laplacian Δ (Kirchhoff's matrix-tree theorem).
@@ -25,7 +25,7 @@ import numpy as np
 
 
 def disc(radius):
-    """Boolean mask of the cells within `radius` of the centre (size 2*radius+1)."""
+    """Boolean mask of the cells within `radius` of the center (size 2*radius+1)."""
     r = int(radius)
     y, x = np.mgrid[-r:r + 1, -r:r + 1]
     return x * x + y * y <= radius * radius

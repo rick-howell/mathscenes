@@ -4,15 +4,15 @@ To solve z³ = 1, start anywhere in the complex plane and repeat Newton's step
 
     z  ->  z − (z³ − 1) / (3z²)
 
-Almost every start runs to one of the three cube roots of 1. Colour each start by the
+Almost every start runs to one of the three cube roots of 1. Color each start by the
 root it reaches and you get three basins of attraction. Their common boundary is a
 fractal (a Julia set of the Newton map) with a strange property: every point on it
-touches all three basins. Wherever two colours meet, the third is there too, at every
+touches all three basins. Wherever two colors meet, the third is there too, at every
 scale ("Wada" property of the boundary).
 
 A boundary point you can write down: −2^(−1/3) ≈ −0.7937 is sent by one step to 0, where
 the method breaks (z² = 0), so it belongs to no basin. Zoom in around it and all three
-colours keep appearing.
+colors keep appearing.
 
 Run:  python -m mathscenes.newton
 """

@@ -1,6 +1,6 @@
 """Episode - the Aztec diamond and the arctic circle.
 
-The Aztec diamond of order n is the staircase-shaped region of unit squares whose centres
+The Aztec diamond of order n is the staircase-shaped region of unit squares whose centers
 satisfy |x| + |y| <= n. It can be tiled by 2×1 dominoes in exactly 2^(n(n+1)/2) ways
 (Elkies, Kuperberg, Larsen and Propp, 1992).
 

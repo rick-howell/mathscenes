@@ -28,7 +28,7 @@ def level_lines(f, modulus_density=1.0, phase_count=8, width=0.55):
     log_mod = np.log2(np.abs(f) + 1e-300) * modulus_density
     gy, gx = np.gradient(log_mod)
     d_mod = np.abs(log_mod - np.round(log_mod)) / (np.hypot(gx, gy) + 1e-12)
-    # phase gradient from ratios of neighbours (immune to the branch cut)
+    # phase gradient from ratios of neighbors (immune to the branch cut)
     px = np.pad(np.angle(f[:, 1:] / f[:, :-1]), ((0, 0), (0, 1)), mode="edge")
     py = np.pad(np.angle(f[1:, :] / f[:-1, :]), ((0, 1), (0, 0)), mode="edge")
     g_ph = np.hypot(px, py) * phase_count / (2 * np.pi) + 1e-12
@@ -47,7 +47,7 @@ def track_continuously(sets):
     parameter values), reorder each set so every point follows a continuous path.
 
     sets: array (steps, n) of complex numbers. Returns array of the same shape where
-    column i is one continuous track. Uses greedy nearest-neighbour matching, which is
+    column i is one continuous track. Uses greedy nearest-neighbor matching, which is
     reliable as long as the steps are small compared with the gaps between points.
     """
     sets = np.asarray(sets)

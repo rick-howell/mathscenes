@@ -1,7 +1,7 @@
 """Episode - two ways to build a torus, and why they give the same space.
 
 1. A product. A point of the circle S¹ = {z in C : |z| = 1} is an angle; a pair of points
-   (z, w), one on each of two circles, is a point of S¹ × S¹. Letting z and w go round
+   (z, w), one on each of two circles, is a point of S¹ × S¹. Letting z and w go around
    sweeps out a doughnut: the torus.
 
 2. A quotient. Take the square [0,1]² and declare (0, t) ~ (1, t) and (s, 0) ~ (s, 1):
@@ -45,7 +45,7 @@ def glued(u, v, s1, s2, R_end=0.45):
         th = 2 * np.pi * s1 * (u - 0.5)
         r = 1 / (2 * np.pi * s1)
         a, b = r * np.sin(th), r * (1 - np.cos(th))
-    # bend: centre line along v becomes an arc of angle 2π·s2
+    # bend: center line along v becomes an arc of angle 2π·s2
     if s2 < 1e-4:
         x, y, z = a, v - 0.5, b
     else:
@@ -64,7 +64,7 @@ def f(s, t):
 
 
 def embed(z, w, R=0.45):
-    """S¹ × S¹ -> R³: z turns round the tube, w round the ring (same shape as the fully
+    """S¹ × S¹ -> R³: z turns around the tube, w around the ring (same shape as the fully
     glued square)."""
     s = np.angle(z) / (2 * np.pi) % 1.0
     t = np.angle(w) / (2 * np.pi) % 1.0

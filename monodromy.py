@@ -49,7 +49,7 @@ def roots(c):
 
 def root_tracks(cpath):
     """Continuous paths of the five roots as c follows cpath. Shape (len(cpath), 5).
-    Roots are labelled 1..5 counter-clockwise by angle at the start of the loop."""
+    Roots are labeled 1..5 counter-clockwise by angle at the start of the loop."""
     sets = np.array([roots(c) for c in cpath])
     sets[0] = sets[0][np.argsort(np.angle(sets[0]))]
     return track_continuously(sets)
