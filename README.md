@@ -46,6 +46,13 @@ into). Each file prints its checks: the numbers behind what the video shows.
 - `tonnetz.py`: change 7a + 4b to another pair of intervals and see which lattice you get.
 - `svf.py`: raise Q and watch the poles move towards the imaginary axis.
 
+## How this was made
+
+The topics, the choice of what to show, the look and the final review are mine. The code
+was written with the help of an AI assistant (Claude), and the maths in each file is
+checked by the tests in its `__main__`. The videos are rendered by code, frame by frame,
+with synthesized music; no image, video or audio generators are used.
+
 ## Licence
 
 MIT (see `LICENSE`): use, change and share the code freely, keeping the copyright notice.
